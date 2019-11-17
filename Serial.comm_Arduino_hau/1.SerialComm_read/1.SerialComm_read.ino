@@ -1,11 +1,11 @@
 //Serial.available ()
-// gets the number of bytes available for reading 
-//returns number of bytes available to read
-//Serial.readStringUntil ()   , read a string until smth
+//gets the number of bytes available for reading 
+//returns number of bytes available to read\
 
 //Serial.read() - reads incoming serial data , only reads character.
 
-String abc;
+
+char input ;
 
 void setup() {
   // put your setup code here, to run once:
@@ -18,8 +18,7 @@ void loop() {
   // put your main code here, to run repeatedly:
  if (Serial.available () > 0 ) // if serial monitor receives anything
  {
-  abc = Serial.readStringUntil ('\n');
-  abc.trim(); //only applies to string
-  Serial.println(abc);
+  input = Serial.read();
+  Serial.println(input);
  }
 }

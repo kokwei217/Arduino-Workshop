@@ -29,5 +29,5 @@ void loop() {
     digitalWrite (led , ledstate);
     updated = false ;
   }
-  previous == current;
+  previous = current;
 }

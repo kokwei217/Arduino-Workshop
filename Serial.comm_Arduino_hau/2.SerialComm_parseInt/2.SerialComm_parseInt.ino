@@ -10,7 +10,7 @@ void loop() {
   // put your main code here, to run repeatedly:
   if (Serial.available()>0)
   {
-    number = Serial.parseInt ();
+    number = Serial.parseInt();
     Serial.println( number);
   }
 
