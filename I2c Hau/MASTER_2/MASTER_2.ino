@@ -1,7 +1,7 @@
 //Master code
 #include <Wire.h>
-int button =9;
-int previous=LOW ;
+int button = 9;
+int previous = LOW ;
 int current;
 
 void setup() {
@@ -15,20 +15,15 @@ byte out = 0;
 
 void loop() {
   current = digitalRead (button);
-  if( previous==HIGH && current ==LOW)
-  
-  {
-    Serial.println('0');
-   Wire.beginTransmission (8);
-  Wire.write (out);
-  Wire.endTransmission();
-  
-  }
-  previous= current;
-  
-  
-}
-  
-    
-  
+  if ( previous == HIGH && current == LOW)
 
+  {
+    Wire.beginTransmission (8);
+    Wire.write (out);
+    Wire.endTransmission();
+
+  }
+  previous = current;
+
+
+}

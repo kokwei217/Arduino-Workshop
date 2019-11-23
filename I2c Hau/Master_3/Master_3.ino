@@ -1,7 +1,7 @@
 //Master code
 #include <Wire.h>
-int button =9;
-int previous=LOW ;
+int button = 9;
+int previous = LOW ;
 int current;
 
 void setup() {
@@ -14,26 +14,22 @@ void setup() {
 byte out = 0;
 
 void loop() {
-  if(Serial.available()>0)
+  if (Serial.available() > 0)
   {
-    char input =Serial.read();
-    if(input =='c')
-    {
-      Wire.beginTransmission(7);
-      Wire.write(out);
-      Wire.endTransmission();
-    }
-    if(input=='v')
+    char input = Serial.read();
+    if (input == 'c')
     {
       Wire.beginTransmission(8);
       Wire.write(out);
-      Wire.endTransmission ();
+      Wire.endTransmission();
     }
-    
-  }
-  
-}
-  
-    
-  
+    if (input == 'v')
+    {
+      Wire.beginTransmission(9);
+      Wire.write(out);
+      Wire.endTransmission();
+    }
 
+  }
+
+}

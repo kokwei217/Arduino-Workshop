@@ -4,7 +4,7 @@ int button =9;
 
 void setup() {
   // put your setup code here, to run once:
-  Wire.begin();
+  Wire.begin(); //Wire.begin(address), addres = specify addresss of slave devices, if not specified, join as master
   pinMode (button , INPUT);
 }
 
